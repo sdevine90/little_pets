@@ -6,3 +6,6 @@ require_relative('controllers/owners_controller')
 get '/' do
   return erb(:index)
 end
+
+
+#type = hiden for id

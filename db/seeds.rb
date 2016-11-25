@@ -7,5 +7,17 @@ pet1 = Pet.new({
 
 pet1.save
 
+pet2 = Pet.new({
+  'name' => "Toddle"
+  })
+
+pet2.save
+
+
+
+
+
+
+
 binding.pry
 nil
