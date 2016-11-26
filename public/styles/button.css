@@ -1,0 +1,28 @@
+/*.btn {
+  border:0px none;
+  border-radius: 3%;
+  padding: 8px 12px;
+  color: papayawhip;
+  cursor:pointer;
+  font-family: 'Arial', sans-serif;
+}
+
+.btn--danger {
+  background-color: pink;
+}
+
+.btn--danger:hover {
+  background-color: purple;
+}
+
+.btn--action:hover {
+  background-color: red;
+}
+
+.btn--action {
+  background-color: darkolivegreen;
+}
+
+.btn--wrapper {
+  margin: 0px 0px 30px 0px;
+}*/
