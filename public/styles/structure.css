@@ -11,6 +11,7 @@ body {
 .nav {
   background-color: purple;
   color: #ffffff;
+  box-shadow: 2px 6px 10px grey;
   list-style: none;
   text-align: center;
   padding: 20px 0 20px 0;
