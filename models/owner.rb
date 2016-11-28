@@ -5,7 +5,7 @@ class Owner
   attr_reader(:id, :name)
 
   def initialize(options)
-    @id = options['id'].to_i
+    @id = options['id'] ? options['id'].to_i : nil
     @name = options['name']
   end
 
@@ -19,6 +19,11 @@ class Owner
     sql = "SELECT * FROM owners" 
     owners = SqlRunner.run( sql )
     return owners.map { |owner| Owner.new(owner)  }
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM owners"
+    SqlRunner.run( sql )
   end
 
 end

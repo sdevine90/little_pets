@@ -1,19 +1,30 @@
 require_relative( '../db/sql_runner' )
+require_relative('owner')
 
 class Pet
 
-  attr_reader(:id, :name, :image)
+  attr_reader(:id, :name, :image, :owner_id)
 
   def initialize(options)
-    @id = options['id'].to_i
+    @id = options['id'] ? options['id'].to_i : nil
     @name = options['name']
     @image = options['image']
+    @owner_id = options['owner_id'] ? options['owner_id'].to_i : 'null'
   end
 
   def save()
-    sql = "INSERT INTO pets (name, image) VALUES ('#{@name}', '#{@image}') RETURNING *"
+    sql = "INSERT INTO pets (name, image, owner_id) 
+          VALUES ('#{@name}', '#{@image}', #{@owner_id}) RETURNING *"
     pets = SqlRunner.run(sql).first
     @id = pets['id'].to_i
+  end
+
+  def owner
+    sql = "SELECT * FROM owners where id = #{@owner_id}"
+    ownerdata = SqlRunner.run( sql )
+    return nil if ownerdata.first == nil
+    options = ownerdata.first
+    return Owner.new(options)
   end
 
   def self.all()
@@ -22,4 +33,8 @@ class Pet
     return pets.map { |pet| Pet.new(pet)  }
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM pets"
+    SqlRunner.run( sql )
+  end
 end

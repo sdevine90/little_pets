@@ -2,12 +2,12 @@ h2 {
   text-align: center;
 }
 
-#pets-container img {
+.frame img {
   width: 250px;
   height:250px;
 }
 
-#pets-container li {
+.frame li {
   display: inline-block;
   margin: 25px 50px;
   padding: 0px;
@@ -21,7 +21,7 @@ h2 {
   background: linear-gradient(bottom, #ff69b4, #fff0f7 255px);
 }
 
-#pets-container {
+.frame {
   margin: 0px 0px 0px 15px;
   padding: 0px;
 }
