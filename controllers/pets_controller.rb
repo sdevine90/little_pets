@@ -20,3 +20,9 @@ post '/pets' do
   pet.save
   redirect to('/pets')
 end
+
+post '/pets/adopt/:pet_id' do
+  pet_id = params[:pet_id]
+  owner_id = params[:owner_id]
+  
+end

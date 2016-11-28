@@ -31,5 +31,7 @@ pet2 = Pet.new({
 
 pet2.save
 
+pet2.adopt(owner2.id)
+
 binding.pry
 nil

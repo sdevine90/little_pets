@@ -27,6 +27,12 @@ class Pet
     return Owner.new(options)
   end
 
+  def adopt(new_owner_id)
+    sql = "update pets set owner_id = #{new_owner_id} where id = #{@id}"
+    SqlRunner.run(sql)
+    @owner_id = new_owner_id
+  end
+
   def self.all()
     sql = "SELECT * FROM pets" 
     pets = SqlRunner.run( sql )
