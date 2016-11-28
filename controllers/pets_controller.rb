@@ -22,7 +22,9 @@ post '/pets' do
 end
 
 post '/pets/adopt/:pet_id' do
-  pet_id = params[:pet_id]
-  owner_id = params[:owner_id]
-  
+  pet_id = params[:pet_id].to_i
+  owner_id = params[:owner_id].to_i
+  pet = Pet.find(pet_id)
+  pet.adopt(owner_id)
+  redirect to('/pets')
 end

@@ -33,6 +33,13 @@ class Pet
     @owner_id = new_owner_id
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM pets WHERE id = #{id}"
+    pets = SqlRunner.run(sql)
+    result = Pet.new(pets.first)
+    return result
+  end
+
   def self.all()
     sql = "SELECT * FROM pets" 
     pets = SqlRunner.run( sql )
