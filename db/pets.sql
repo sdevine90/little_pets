@@ -8,6 +8,7 @@ name VARCHAR(255) not null
 
 CREATE TABLE pets(
 id SERIAL8 primary key,
-name VARCHAR(255) not null
+name VARCHAR(255) not null,
+image VARCHAR(255) not null
 );
 

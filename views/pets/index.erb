@@ -3,7 +3,7 @@
 <ul id="pets-container">
 <% for pet in @pets %>
   <li>
-    <img width="250" height="250" src="/images/b60fbf6ee59b71f821dba2ac9b7f01c2.png" />
+    <img src="/images/<%= pet.image %>" />
     <form class="pet" action="/pets/adopt/1" method="post">
       <label><%= pet.name %>:
         <select name="owner_id"> 
