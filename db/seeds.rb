@@ -9,7 +9,12 @@ owner1 = Owner.new({
   'name' => "Julie"
   })
 
+owner2 = Owner.new({
+  'name' => "Pearl"
+  })
+
 owner1.save
+owner2.save
 
 pet1 = Pet.new({
   'name' => "Mixie",

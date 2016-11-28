@@ -11,10 +11,9 @@
     <form class="pet" action="/pets/adopt/1" method="post">
       <label>
         <select name="owner_id"> 
-          <option value="1">Amanda</option>
-          <option value="2">Pearl</option>
-          <option value="3">Fred</option>
-          <option value="4">Callum</option>
+        <% for owner in @owners %>
+          <option value="1"><%= owner.name %></option>
+          <% end %>
         </select>
       </label>
       <input class="fsSubmitButton" type="submit" value="Adopt Me!" />

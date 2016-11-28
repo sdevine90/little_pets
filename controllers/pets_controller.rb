@@ -6,6 +6,7 @@ require_relative( '../models/owner.rb' )
 
 get '/pets' do
   @pets = Pet.all
+  @owners = Owner.all
   erb(:"pets/index")
 end
 
