@@ -1,5 +1,12 @@
 require('pry-byebug')
 require_relative( '../models/pet.rb' )
+require_relative( '../models/owner.rb' )
+
+owner1 = Owner.new({
+  'name' => "Julie"
+  })
+
+owner1.save
 
 pet1 = Pet.new({
   'name' => "Mixie"

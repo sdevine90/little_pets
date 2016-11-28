@@ -5,6 +5,7 @@ require_relative('controllers/owners_controller')
 
 
 get '/' do
+  @show_image = "block"
   return erb(:index)
 end
 
