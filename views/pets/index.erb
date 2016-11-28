@@ -1,22 +1,11 @@
+
+
 <ul id="pets-container">
-<li>
-    <img width="250" height="250" src="/images/b60fbf6ee59b71f821dba2ac9b7f01c2.png" />
-    <form class="pet" action="/pets" method="post">
-      <label>Mixie:
-        <select name="owner_id"> 
-          <option value="1">Amanda</option>
-          <option value="2">Pearl</option>
-          <option value="3">Fred</option>
-          <option value="4">Callum</option>
-        </select>
-      </label>
-      <input class="fsSubmitButton" type="submit" value="Mixie is loved!" />
-    </form>
-  </li>
+<% for pet in @pets %>
   <li>
     <img width="250" height="250" src="/images/b60fbf6ee59b71f821dba2ac9b7f01c2.png" />
-    <form class="pet" action="/pets" method="post">
-      <label>Mixie:
+    <form class="pet" action="/pets/adopt/1" method="post">
+      <label><%= pet.name %>:
         <select name="owner_id"> 
           <option value="1">Amanda</option>
           <option value="2">Pearl</option>
@@ -27,35 +16,9 @@
       <input class="fsSubmitButton" type="submit" value="Mixie is loved!" />
     </form>
   </li>
-  <li>
-    <img width="250" height="250" src="/images/b60fbf6ee59b71f821dba2ac9b7f01c2.png" />
-    <form class="pet" action="/pets" method="post">
-      <label>Mixie:
-        <select name="owner_id"> 
-          <option value="1">Amanda</option>
-          <option value="2">Pearl</option>
-          <option value="3">Fred</option>
-          <option value="4">Callum</option>
-        </select>
-      </label>
-      <input class="fsSubmitButton" type="submit" value="Mixie is loved!" />
-    </form>
-  </li>
-  <li>
-    <img width="250" height="250" src="/images/b60fbf6ee59b71f821dba2ac9b7f01c2.png" />
-    <form class="pet" action="/pets" method="post">
-      <label>Mixie:
-        <select name="owner_id"> 
-          <option value="1">Amanda</option>
-          <option value="2">Pearl</option>
-          <option value="3">Fred</option>
-          <option value="4">Callum</option>
-        </select>
-      </label>
-      <input class="fsSubmitButton" type="submit" value="Mixie is loved!" />
-    </form>
-  </li>
+ <% end %>
 </ul>
+
 
 
 
