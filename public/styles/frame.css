@@ -2,10 +2,30 @@ h2 {
   text-align: center;
 }
 
+#pets-container li {
+  display: inline-block;
+  margin: 25px 50px;
+  padding: 0px;
+  border: 1px solid #b2497d;
+  color: #b2497d;
+  font-size: 26px;
+  border-radius: 30px;
+  padding: 30px;
+  background: -webkit-linear-gradient(bottom, #ff69b4, #fff0f7 255px);
+  background: -moz-linear-gradient(bottom, #ff69b4, #fff0f7 255px);
+  background: linear-gradient(bottom, #ff69b4, #fff0f7 255px);
+}
+
+#pets-container {
+  margin: 0px 0px 0px 15px;
+  padding: 0px;
+}
+
+
 form {
-  background: url('/images/mixie2.jpg');
-  background-repeat: no-repeat;
-  margin-top: 70px;
+/*  background: url('/images/mixie2.jpg');
+  background-repeat: no-repeat;*/
+/*  margin-top: 70px;
   margin-bottom: 100px;
   margin-right: 150px;
   margin-left: 80px;
@@ -13,23 +33,20 @@ form {
   width: 350px;
   height: 250px;
   font-family: Arial;
-  font-size: 26px;
-  line-height: 470px;
-  font-weight: bold;
+  font-size: 26px;*/
+/*  line-height: 470px;*/
+/*  font-weight: bold;
   color: #b2497d;
   text-decoration: none;
   border-radius: 30px;
   padding: 30px;
   border: 1px solid #b2497d;
-  border: inset 1px solid #b2497d;
+  border: inset 1px solid #b2497d;*/
 }
 
 
 
 .fsSubmitButton {
-position: absolute;
-right: 20px;
-bottom: 20px;
 padding: 10px 20px 11px !important;
 font-size: 21px !important;
 background-color: #F36C8C;

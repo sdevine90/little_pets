@@ -20,11 +20,5 @@ pet2 = Pet.new({
 
 pet2.save
 
-
-
-
-
-
-
 binding.pry
 nil
