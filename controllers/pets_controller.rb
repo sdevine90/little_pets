@@ -28,3 +28,14 @@ post '/pets/adopt/:pet_id' do
   pet.adopt(owner_id)
   redirect to('/pets')
 end
+
+# post '/pets/unadopt/:pet_id' do
+#   pet_id = params[:pet_id].to_i
+#   owner_id = params[:owner_id].to_i
+#   pet = Pet.find(pet_id)
+#   pet.unadopt(owner_id)
+#   redirect to('/pets')
+# end
+
+
+

@@ -33,6 +33,13 @@ class Pet
     @owner_id = new_owner_id
   end
 
+  # def unadopt(nill)
+  #   sql = "update pets set owner_id = nill where id = #{@id}"
+  #   SqlRunner.run(sql)
+  #   @owner_id = nill
+  # end 
+  #need to add nill at the top?
+
   def self.find(id)
     sql = "SELECT * FROM pets WHERE id = #{id}"
     pets = SqlRunner.run(sql)

@@ -1,0 +1,17 @@
+
+<ul class="frame">
+  <% for owner in @owners %>
+  <li>
+    <p><%= owner.name %></p>
+    <img src="/images/<%= owner.image %>"/>
+      <% for pet in @pets %>
+        <% if pet.owner_id == owner.id %>
+        <p><img src="/images/<%=pet.image%>" alt="Icon" style=“width:150px;height:150px;"></p>
+        <% end %>
+      <% end %>
+  <% end %>
+  
+
+</ul>
+
+
