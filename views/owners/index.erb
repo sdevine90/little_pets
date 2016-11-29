@@ -1,17 +1,20 @@
 
-<ul class="frame">
-  <% for owner in @owners %>
-  <li>
-    <p><%= owner.name %></p>
-    <img src="/images/<%= owner.image %>"/>
-      <% for pet in @pets %>
-        <% if pet.owner_id == owner.id %>
-        <p><img src="/images/<%=pet.image%>" alt="Icon" style=“width:150px;height:150px;"></p>
+
+  <ul class="frame">
+    <% for owner in @owners %>
+    <li>
+      <p><%= owner.name %></p>
+      <img src="/images/<%= owner.image %>"/>
+        <% for pet in @pets %>
+          <% if pet.owner_id == owner.id %>
+          <p><img src="/images/<%=pet.image%>" alt="Icon" style=“width:150px;height:150px;"></p>
+          <form class="pet" action="/pets/update/<%=pet.id%>" method="post">
+              <input type="hidden" name="owner_id" value="<%= owner.id %>">
+            <input class="fsSubmitButton" type="submit" value="remove" />
+          </form>
+          <% end %>
         <% end %>
-      <% end %>
-  <% end %>
-  
+    <% end %>
+    
 
-</ul>
-
-
+  </ul>

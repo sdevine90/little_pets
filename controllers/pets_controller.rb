@@ -29,11 +29,23 @@ post '/pets/adopt/:pet_id' do
   redirect to('/pets')
 end
 
+#all this is new 
+
+
+get '/pets/:id/edit' do
+  @pet = Pet.find( params[:id] )
+  erb(:edit)
+end
+
+post '/pets/update/:id' do
+  Pet.update( params)
+  redirect to ("/owners")
+end
+
+
 # post '/pets/unadopt/:pet_id' do
-#   pet_id = params[:pet_id].to_i
 #   owner_id = params[:owner_id].to_i
-#   pet = Pet.find(pet_id)
-#   pet.unadopt(owner_id)
+#   Pet.unadopt(owner_id)
 #   redirect to('/pets')
 # end
 
