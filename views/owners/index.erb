@@ -7,7 +7,7 @@
       <img src="/images/<%= owner.image %>"/>
         <% for pet in @pets %>
           <% if pet.owner_id == owner.id %>
-          <p><img src="/images/<%=pet.image%>" alt="Icon" style=“width:150px;height:150px;"></p>
+          <p><img src="/images/<%=pet.image%>" alt="Icon" style=“width:250px;height:250px;"></p>
           <form class="pet" action="/pets/update/<%=pet.id%>" method="post">
               <input type="hidden" name="owner_id" value="<%= owner.id %>">
             <input class="fsSubmitButton" type="submit" value="remove" />

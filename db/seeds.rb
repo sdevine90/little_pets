@@ -7,17 +7,17 @@ Owner.delete_all
 
 owner1 = Owner.new({
   'name' => "Julie",
-  'image' => "julie.png"
+  'image' => "julie3.png"
   })
 
 owner2 = Owner.new({
-  'name' => "Ben",
-  'image' => "ben.png"
+  'name' => "Cameron",
+  'image' => "cameron.png"
   })
 
 owner3 = Owner.new({
   'name' => "Val",
-  'image' => "val.png"
+  'image' => "val2.png"
   })
 
 owner1.save
@@ -26,24 +26,24 @@ owner3.save
 
 pet1 = Pet.new({
   'name' => "Mixie",
-  'image' => 'b60fbf6ee59b71f821dba2ac9b7f01c2.png',
+  'image' => 'mixie.png',
   })
 
 
 pet2 = Pet.new({
   'name' => "Leeroy",
-  'image' => "Leeroy.png",
+  'image' => "leeroy2.png",
   })
 
 
 pet3 = Pet.new({
   'name' => "Tony",
-  'image' => "tony.png",
+  'image' => "tony3.png",
   })
 
 pet4 = Pet.new({
-  'name' => "Oasis",
-  'image' => "oasis.png",
+  'name' => "Lexi",
+  'image' => "lexi2.png",
   })
 
 pet1.save
