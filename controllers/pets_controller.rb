@@ -32,16 +32,22 @@ end
 #all this is new 
 
 
-get '/pets/:id/edit' do
+get '/pets/:id' do
   @pet = Pet.find( params[:id] )
-  erb(:edit)
+  erb(:"pets/show")
 end
+
+
 
 post '/pets/update/:id' do
   Pet.update( params)
   redirect to ("/owners")
 end
 
+# post '/pets/:id/show' do
+#   @pet = Pet.find( params[:id] )
+#   redirect to ("/show")
+# end
 
 # post '/pets/unadopt/:pet_id' do
 #   owner_id = params[:owner_id].to_i

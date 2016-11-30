@@ -2,7 +2,8 @@
 <ul class="frame">
   <% for pet in @pets %>
   <li>
-    <p><%= pet.name %></p>
+
+  <p><a href="/pets/<%=pet.id%>" style="color: #ff78bb; text-decoration: none" method="post"><%= pet.name %></a></p>
     <img src="/images/<%= pet.image %>" />
 
     <% if pet.owner %>
@@ -11,7 +12,7 @@
     <form class="pet" action="/pets/adopt/<%=pet.id%>" method="post">
       <label>
         <select name="owner_id"> 
-        <% for owner in @owners %>
+          <% for owner in @owners %>
           <option value="<%= owner.id %>"><%= owner.name %></option>
           <% end %>
         </select>
@@ -23,5 +24,5 @@
   <% end %>
 </ul>
 
-<!-- if owned show unadopt button -->
+
 
