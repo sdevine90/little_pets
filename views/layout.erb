@@ -9,14 +9,15 @@
   <link rel="stylesheet" type="text/css" href="/styles/firstpage.css">
 
 </head>
-<img style="display: <%= @show_image || "none" %>" class="centeredimage" src="images/littlest_pet_shop_logo_2_vector_by_varg45-d8y5up8.png">
+<ul class="nav">
+  <li><a href="/">Home</a></li>
+  <li><a href="/pets">Pets</a></li>
+  <li><a href="/owners">Owners</a></li>
+</ul>
 
 <body>
-  <ul class="nav">
-      <li><a href="/">Home</a></li>
-      <li><a href="/pets">Pets</a></li>
-      <li><a href="/owners">Owners</a></li>
-    </ul>
+  <img style="display: <%= @show_image || "none" %>" class="centeredimage" src="images/littlest_pet_shop_logo_2_vector_by_varg45-d8y5up8.png">
+  <%= yield %>
+  
 </body>
-<%= yield %>
 </html>
