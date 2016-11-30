@@ -46,12 +46,42 @@ pet4 = Pet.new({
   'image' => "lexi2.png",
   })
 
+pet5 = Pet.new({
+  'name' => "Pinky",
+  'image' => "pinky.png",
+  })
+
+pet6 = Pet.new({
+  'name' => "Penny",
+  'image' => "penny2.png",
+  })
+
+pet7 = Pet.new({
+  'name' => "Roxy",
+  'image' => "roxy.png",
+  })
+
+pet8 = Pet.new({
+  'name' => "Flower",
+  'image' => "flower.png",
+  })
+
+pet9 = Pet.new({
+  'name' => "Lexi",
+  'image' => "lexi2.png",
+  })
+
 pet1.save
 pet2.save
 pet3.save
 pet4.save
+pet5.save
+pet6.save
+pet7.save
+pet8.save
 
-# pet2.adopt(owner2.id)
+
+
 
 binding.pry
 nil
