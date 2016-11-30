@@ -67,9 +67,11 @@ pet8 = Pet.new({
   })
 
 pet9 = Pet.new({
-  'name' => "Lexi",
-  'image' => "lexi2.png",
+  'name' => "Star",
+  'image' => "star.png",
   })
+
+
 
 pet1.save
 pet2.save
@@ -79,6 +81,7 @@ pet5.save
 pet6.save
 pet7.save
 pet8.save
+pet9.save
 
 
 
