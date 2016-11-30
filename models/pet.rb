@@ -3,18 +3,19 @@ require_relative('owner')
 
 class Pet
 
-  attr_reader(:id, :name, :image, :owner_id)
+  attr_reader(:id, :name, :breed, :image, :owner_id)
 
   def initialize(options)
     @id = options['id'] ? options['id'].to_i : nil
     @name = options['name']
+    @breed = options['breed']
     @image = options['image']
     @owner_id = options['owner_id'] ? options['owner_id'].to_i : 'null'
   end
 
   def save()
-    sql = "INSERT INTO pets (name, image, owner_id) 
-          VALUES ('#{@name}', '#{@image}', #{@owner_id}) RETURNING *"
+    sql = "INSERT INTO pets (name, breed, image, owner_id) 
+          VALUES ('#{@name}', '#{@breed}', '#{@image}', #{@owner_id}) RETURNING *"
     pets = SqlRunner.run(sql).first
     @id = pets['id'].to_i
   end

@@ -27,48 +27,57 @@ owner3.save
 pet1 = Pet.new({
   'name' => "Mixie",
   'image' => 'mixie.png',
+  'breed' => 'Kitty Cat',
   })
 
 
 pet2 = Pet.new({
   'name' => "Leeroy",
   'image' => "leeroy2.png",
+  'breed' => 'Rodent',
   })
 
 
 pet3 = Pet.new({
   'name' => "Tony",
   'image' => "tony3.png",
+  'breed' => 'Lizard',
   })
 
 pet4 = Pet.new({
   'name' => "Lexi",
   'image' => "lexi2.png",
+  'breed' => 'Dog',
   })
 
 pet5 = Pet.new({
   'name' => "Pinky",
   'image' => "pinky.png",
+  'breed' => 'Skunk',
   })
 
 pet6 = Pet.new({
   'name' => "Penny",
   'image' => "penny2.png",
+  'breed' => 'Rodent',
   })
 
 pet7 = Pet.new({
   'name' => "Roxy",
   'image' => "roxy.png",
+  'breed' => 'Dog',
   })
 
 pet8 = Pet.new({
   'name' => "Flower",
   'image' => "flower.png",
+  'breed' => 'Sheep',
   })
 
 pet9 = Pet.new({
   'name' => "Star",
   'image' => "star.png",
+  'breed' => 'Leopard',
   })
 
 
